@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-color: #000;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  overflow-x: hidden;
+}
+
+/* HEADER SECTION */
+header h1 {
+  font-size: 72px;
+  font-family: "Inter";
+  /* background: -webkit-linear-gradient(#06fdf1, #00f335); */
+  background: -webkit-linear-gradient(#0055ff, #02ee50);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #fff;
+  min-height: 15vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* MAIN SECTION */
+main {
+  min-height: calc(100vh - 23vh);
+  padding: 25px;
+}
+
+.recipe-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.recipes {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: 5px solid #00daa3;
+  color: #fff;
+  border-radius: 25px;
+  padding: 15px;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: linear;
+  transition-duration: 200ms;
+}
+
+.recipes:hover {
+  transform: scale(1.05);
+}
+
+figcaption {
+  text-align: center;
+  padding: 25px;
+  font-size: 24px;
+  flex: 1;
+  font-family: "Poppins";
+}
+
+figcaption a {
+  color: #fff;
+  text-decoration: none;
+}
+
+img {
+  width: 500px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+/* FOOTER SECTION */
+footer {
+  text-align: center;
+  min-height: 8vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.copyright {
+  font-size: 21px;
+  color: #fff;
+  font-family: "Poppins";
+  font-weight: 400;
+  transition: color 0.2s;
+}
+
+/* LVHA */
+.copyright:link {
+  color: #06fdf1;
+}
+
+.copyright:visited {
+  color: #699bff;
+}
+
+.copyright:hover {
+  color: #02ee50;
+}
+
+.copyright:active {
+  color: #ff6bb5;
+}
