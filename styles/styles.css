@@ -1,61 +1,88 @@
-* {
+:root {
+  /* Fonts */
+  --pop: 'Poppins', 'Inter', sans-serif;
+  --int: 'Inter', 'Poppins', sans-serif;
+
+  /* Primary Colors */
+  --black: #000;
+  --white: #fff;
+
+  /* Neutral Colors */
+}
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
-  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: var(--pop);
 }
 
 body {
-  background-color: #000;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-  overflow-x: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 2em 0;
+  font-size: 1.6rem;
+  text-align: center;
+  background-color: var(--black);
+  color: var(--white);
+}
+
+img {
+  width: 100%;
+  max-width: 350px;
+  /* min-height: 10dvh; */
+  object-fit: cover;
 }
 
 /* HEADER SECTION */
-header h1 {
+header {
+  min-height: 10dvh;
+}
+
+h1 {
   font-size: 72px;
-  font-family: "Inter";
-  /* background: -webkit-linear-gradient(#06fdf1, #00f335); */
+  font-family: 'Inter';
+  background: -webkit-linear-gradient(#06fdf1, #00f335);
   background: -webkit-linear-gradient(#0055ff, #02ee50);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  color: #fff;
-  min-height: 15vh;
+  background-clip: text;
   margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 /* MAIN SECTION */
 main {
-  min-height: calc(100vh - 23vh);
-  padding: 25px;
+  min-height: calc(100dvh - 15dvh);
+  padding: 2em 1em;
+  margin: 1em 0;
 }
 
 .recipe-container {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
-  gap: 50px;
+  gap: 40px;
 }
 
 .recipes {
+  width: 500px;
   display: flex;
-  align-items: center;
   flex-direction: column;
-  border: 5px solid #00daa3;
-  color: #fff;
+  align-items: center;
+  border: 5px solid #0055ff;
   border-radius: 25px;
   padding: 15px;
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-timing-function: linear;
-  transition-duration: 200ms;
+  transition: all, cubic-bezier(0.4, 0, 0.2, 1), linear, 500ms;
+  margin: 0;
 }
 
-.recipes:hover {
+.recipes:hover,
+.recipes:active {
   transform: scale(1.05);
 }
 
@@ -64,7 +91,7 @@ figcaption {
   padding: 25px;
   font-size: 24px;
   flex: 1;
-  font-family: "Poppins";
+  font-family: 'Poppins';
 }
 
 figcaption a {
@@ -72,28 +99,17 @@ figcaption a {
   text-decoration: none;
 }
 
-img {
-  width: 500px;
-  height: 350px;
-  object-fit: cover;
-  border-radius: 15px;
-}
-
 /* FOOTER SECTION */
 footer {
   text-align: center;
-  min-height: 8vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  min-height: 2dvh;
 }
 
 .copyright {
   font-size: 21px;
-  color: #fff;
-  font-family: "Poppins";
+  font-family: 'Poppins';
   font-weight: 400;
-  transition: color 0.2s;
+  transition: color 0.25s;
 }
 
 /* LVHA */
